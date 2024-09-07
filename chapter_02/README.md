@@ -150,7 +150,7 @@ You can either use a passive or active tap. Passive taps are easier to use but a
 2. Connect Beelink to the switch.
 3. Find the IP address of the switch's web management interface. It is usually acquired from DHCP but you if you are unsure, either look at the switche's manual or use a network scanner like nmap (e.g., `nmap -p 80 192.168.0.0/24`) and try any IPs that look positive.
 4. Open a browser and type the IP address of the switch. You will be prompted to enter a username and password. The default credentials are usually found on the switch itself or in the manual. Common defaults are `admin` for both username and password, or `admin` for username and `admin` for password. You may have to google search for your switch's default credentials (e.g., "TP-Link TL-SG105E default login").
-5. Find the port mirroring setting and mirror the port that Beelink is connected to. This way, Beelink will see all traffic that goes through the switch. Example image:
+5. Find the port mirroring setting and mirror the port that Beelink is connected to. This way, Beelink will see all traffic that goes through the switch. Setup for ingress-egress data duplication the port that leads to your ISP router (edge router). Example image:
 [![Port Mirroring](img/port-mirroring.png)](img/port-mirroring.png)
 6. Now data should be flowing to Beelink and you can start monitoring your network.
 
@@ -166,6 +166,33 @@ If you have a WiFi router, you can connect it to the switch and use it as an acc
 
 #### Wired devices
 If you have wired devices, you can connect them to the switch or the WiFi router. If you connect them on the ISP's router then their traffic will likely won't be monitored.
+
+
+#### Topology Example
+
+Here is an example of the topology you should have after following the above steps:
+```
+    +-------------------+
+    |    Edge Router    |
+    +-------------------+
+                |
+                |
+                |
+    +-------------------+
+    |      Switch       |
+    +-------------------+
+        |               |
+        |               |
+        |               |   
+ +-------------------+  |
+ |   WiFi Router     |  |
+ +-------------------+  |
+                        |  
+                        |
+        +-------------------+
+        |        IDS        |
+        +-------------------+
+```
 
 <a name="nsm-vm"></a>
 ### Option 2: Running locally on prefabricated VM (Easy)
