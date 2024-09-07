@@ -81,8 +81,8 @@ Universal Plug and Play (UPnP) allows devices to discover each other on the netw
 
 There are several ways to setup network security monitoring in your network especially for following the subsequent chapters of the book. I have a few options but it will highly depend on the degree of time you want to put in and the available resources.
 
-- **Option 1**: Full Hardware Solution (Difficult) #nsm-hardware
-- **Option 2**: Running locally on prefabricated VM (Easy) #nsm-vm
+- **Option 1**: [Full Hardware Solution (Difficult)](#nsm-hardware)
+- **Option 2**: [Running locally on prefabricated VM (Easy)](#nsm-vm)
 
 <a name="nsm-hardware"></a>
 ### Option 1: Full Hardware Solution (Difficult)
