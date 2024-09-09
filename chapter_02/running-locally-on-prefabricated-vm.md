@@ -10,7 +10,10 @@ You can download a VM that has everything preinstalled and ready to go. You can 
 5. Select the downloaded VM and click Open.
 6. Click Import.
 7. Once the import is over, click Start.
-8. The VM will boot and you will see a login screen. The username is `nsm` and the password is `nsm`.
+8. The VM will boot and you will see a login screen. The username is `netsec` and the password is `netsec123`.
 9. Once logged in, open a browser and type `localhost:5601`. You will see the Opensearch Dashboards interface. Example image:
-[![Dashboards](img/dashboards.png)](img/dashboards.png)
-10. You can now start following the book's chapters.
+[![Dashboards](img/dashboards.png)](img/dashboards.png).
+10. The login information for the web interface is `admin` and the password is `Netsec123`.
+
+## Final step
+You'll need to setup an index pattern in OpenSearch Dashboards to see the data. The guide is [here](setting-up-index-pattern.md).
