@@ -1,5 +1,5 @@
 # Option 1: Full Hardware Solution (Difficult)
-This is the most comprehensive solution but also the most expensive. 
+This is the most comprehensive solution but also the most expensive. Expect to pay around $300 (more if you go for high-end options) for the hardware if you don't have any spare devices laying around.
 
 ## IDS Device
 You'll need a device to run your IDS stack. You can use any computer or even somewhat older laptop but they draw power and they have to be always on. A single board computer like a Raspberry Pi is preferable especially for your home network. Two options are:
@@ -8,6 +8,7 @@ You'll need a device to run your IDS stack. You can use any computer or even som
 
 Because Raspberry Pi 4 is ARM architecture, Beelink is preferable as it is x86_64 architecture and most software is compiled for it. The guide will continue with Beelink in mind. The good news is that it comes with disk and everything else that you need.
 
+### Installing Linux on Beelink
 Beelink comes with Windows installed which is not what we need. Instead you'll install Linux on it:
 1. Download Ubuntu Server 24.04 LTS from [here](https://ubuntu.com/download/server)
 2. Create a bootable USB using [Rufus](https://rufus.ie/) or [Balena Etcher](https://www.balena.io/etcher/)
@@ -22,8 +23,8 @@ Beelink comes with Windows installed which is not what we need. Instead you'll i
 11. After the install is over, remove the USB drive and reboot.
 12. Beelink is now a ready to use server for your IDS stack. You can disconnect any keyboard and monitor from it.
 
+### Installing IDS Software
 Next up, we need to install on Beelink the necessary software.
-
 1. Plug Beelink's ethernet into your router. This won't be its final location, just a temporary for setting up.
 2. Boot it up and then find its IP address in your network. You can do this by logging into your router and looking at the connected devices. Or since we know that SSH is active, you can do `nmap -p 22 192.168.0.0/24` to find devices in your subnet that have port 22 open (i.e., SSH). Remember to replace your subnet with the correct one based on your network.
 3. Get to your Laptop or Desktop. If you are using Windows, download [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and install it. If you are using Mac or Linux, you can use the Terminal.
@@ -50,14 +51,12 @@ enp2s0: flags=4419<UP,BROADCAST,RUNNING,PROMISC,MULTICAST>  mtu 1500
 Make a note of the code (e.g., enp2s0) that is associated with network interface.
 12. To load the IDS software, type `bash start.sh`. This will prompt you with a few questions about your network, provide the answers based on what you know. It will also take a while for everything to be download and started. Be patient. When everything returns to prompt, you are ready to go. Example image:
 [![Ready](img/nsm-ready.png)](img/nsm-ready.png)
-
-You can also verify that everything works by opening a browser and typing the IP address of Beelink. You should see the Opensearch Dashboards interface. Example image:
+13. You can also verify that everything works by opening a browser and typing the IP address of Beelink. You should see the Opensearch Dashboards interface. Example image:
 [![Kibana](img/dashboards.png)](img/dashboards.png)
-
-At this point you can also go to your router and assign a fixed IP for beelink. This way, you can always access it using the same IP.
+14. At this point you can also go to your router and assign a fixed IP for beelink. This way, you can always access it using the same IP.
 
 ## Network Tap
-You can either use a passive or active tap. Passive taps are easier to use but active taps are more versatile. One active tap that you can use is a switch like [https://www.amazon.com/TP-LINK-TL-SG105E-5-Port-Gigabit-Version/dp/B00N0OHEMA](TP-Link TL-SG105E). This switch has a feature called port mirroring that allows you to mirror all traffic from one port to another.
+You can either use a passive or active tap. Passive taps are easier to use but active taps are more versatile. One active tap that you can use is a switch like [TP-Link TL-SG105E](https://www.amazon.com/TP-LINK-TL-SG105E-5-Port-Gigabit-Version/dp/B00N0OHEMA). This switch has a feature called port mirroring that allows you to mirror all traffic from one port to another.
 
 1. Connect the switch to your router.
 2. Connect Beelink to the switch.
@@ -68,7 +67,7 @@ You can either use a passive or active tap. Passive taps are easier to use but a
 6. Now data should be flowing to Beelink and you can start monitoring your network.
 
 ## WiFi Router
-If you have a WiFi router, you can connect it to the switch and use it as an access point. This way, all WiFi traffic will also be monitored. DO NOT use your ISP's router as a WiFi router as traffic won't flow through the switch, especially for internet communications. Instead, buy a separate one. Example [https://www.amazon.com/WiFi-6-Router-Gigabit-Wireless/dp/B08H8ZLKKK](TP-Link Archer AX1800).
+If you have a WiFi router, you can connect it to the switch and use it as an access point. This way, all WiFi traffic will also be monitored. DO NOT use your ISP's router as a WiFi router as traffic won't flow through the switch, especially for internet communications. Instead, buy a separate one. Example: [TP-Link Archer AX1800](https://www.amazon.com/WiFi-6-Router-Gigabit-Wireless/dp/B08H8ZLKKK).
 
 1. Get your laptop or desktop and connect to the WiFi router using an ethernet cable. DO NOT connect to the Wifi or have anything else networked connected to it.
 2. Use the guide to find the default IP address of the WiFi router and access it through your browser.

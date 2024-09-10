@@ -8,7 +8,7 @@ You can download a VM that has everything preinstalled and ready to go. You can 
 3. Install VirtualBox.
 4. Open VirtualBox and click on Import Appliance.
 5. Select the downloaded VM and click Open.
-6. Click Import.
+6. Click Import. Make sure to select "all network adapters" to be included (not just NAT). All other settings you can leave as default.
 7. Once the import is over, click Start.
 8. The VM will boot and you will see a login screen. The username is `netsec` and the password is `netsec123`.
 9. Once logged in, open a browser and type `localhost:5601`. You will see the Opensearch Dashboards interface. Example image:

@@ -81,6 +81,8 @@ Universal Plug and Play (UPnP) allows devices to discover each other on the netw
 
 There are several ways to setup network security monitoring in your network especially for following the subsequent chapters of the book. I have a few options but it will highly depend on the degree of time you want to put in and the available resources.
 
+If you just want to practice along with the book, I recommend the second option. This will give you a flavor by allowing you to monitor your computer. You can always come back to the first option later if you want to make things more interesting and monitor your whole network.
+
 - **Option 1**: [Full Hardware Solution (Difficult)](../chapter_02/full-hardware-solution.md)
 - **Option 2**: [Running locally on prefabricated VM (Easy)](../chapter_02/running-locally-on-prefabricated-vm.md)
 
