@@ -19,6 +19,7 @@ You can build a visualization to show all the open ports on your edge devices. T
 ```
 10. Click on the "Save" button to save the visualization as "Data Table - Open Ports".
 
+<a name="bytes-to-server-to-client"></a>
 ## Examining bytes to servers vs to clients
 There are two ways to build such a visualization:
 - using TSVB (Time Series Visual Builder) to build a line chart that shows the bytes sent to servers and to clients over time.
@@ -88,3 +89,18 @@ Here's how it looks:
 
 ## Evaluating mail traffic
 
+You can build a visualization to check for time series byte traffic to mail traffic (assuming you have a mail server running on your network). This can help you identify spam campaigns to the server (usually the volume would be higher).
+
+1. Go to the Opensearch Dashboards web interface.
+2. Click on the "Visualize" tab in the left top area.
+3. Click on "Create visualization".
+4. Select "Timeline" as the visualization type.
+5. Then on the right hand side, type the following:
+
+```
+.es(
+  index=logstash*, 
+  q='dest_port:(25 OR 587 OR 465) AND (dest_ip:(10.0.0.0/8 OR 172.16.0.0/12 OR 192.168.0.0/16))',
+  metric='sum:total_bytes'
+).label('Byte Traffic for Mail Ports to Non-Routable IPs').divide(1048576)
+```
