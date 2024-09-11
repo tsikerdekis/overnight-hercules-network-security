@@ -1,6 +1,23 @@
 # Chapter 4: Securing your Endpoint Devices
 
 ## Inventory of endpoint devices
+You can use the existing data in your Opensearch cluster to create an inventory of all the endpoint devices on your network. This will help you identify all the devices that are connected to your network and monitor their activity. Assuming your network's subnet is 192.168.0.0/24, follow the steps to create a visualization that shows all the devices in your network.
+
+1. Go to the Opensearch Dashboards web interface.
+2. Click on the "Visualize" tab in the left top area.
+3. Click on "Create visualization".
+4. Select "Data table" as the visualization type.
+5. Select the index pattern (logstash*) and click "Next step".
+6. Select "Split rows" and then "Aggregation" as "Terms".
+7. Select "Field" as `src_ip.keyword` and click "Apply".
+8. Increase the "Size" to 1000 to show all the devices in the network.
+9. Then you'll need to filter for only local network IPs:
+```
+src_ip: 10.0.0.0/8 OR src_ip: 172.16.0.0/12 OR src_ip: 192.168.0.0/16
+```
+10. Click on the "Save" button to save the visualization as "Data Table - Source IP".
+
+Technically, you could do this for `dest_ip` but given that most devices in a network tend to talk, the `src_ip` should reveal them all.
 
 ## Fingerprinting devices
 Time for something more advanced. We'll build an IP fingerprinting dashboard. Basically a dashboard that can tell us all that a device is doing. This is useful for identifying rogue devices on your network.
