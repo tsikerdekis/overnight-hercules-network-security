@@ -137,25 +137,50 @@ You can save it and then import it into Opensearch Dashboards.
 
 ## Alert correlation
 
-You know how you can filter records based on a bunch of criteria? Well what if you could filter on the basis of two or more records in order to get an alert. In other words, have criteria that apply across multiple records but within a time window. If I see SSH connections for an IP and also attempts to connect to port 80 (HTTP) within 5 minutes, I want an alert.
+You know how you can filter records based on a bunch of criteria? Well what if you could filter on the basis of two or more records in order to get an alert. In other words, have criteria that apply across multiple records but within a time window. If I see SSH connections for an IP and also attempts to connect to port 80 (HTTP) within 5 minutes, I want an alert. This can be a useful alert in case someone is probbing for example your router (from within usually).
 
 1. Go to OpenSearch Dashboards > Alerting.
 2. Click Correlations
 3. Click Create correlation rule.
 4. Name it: SSH and HTTP connection attempts.
 5. Set "index" for "Data source 1" as logstash (you can use the alias for this, just click on any), and log type as "network".
-6. Then the field is `dest_port` with value 22, and `dest_ip` with value `192.168.0.17`.
+6. Then the field is `dest_port` with value 22, and `dest_ip` with value `192.168.0.1`.
 7. Set "index" for "Data source 2" as logstash (you can use the alias for this, just click on any), and log type as "network".
 8. Then the field is `dest_port` with value 80, and `dest_ip` with value `
 9. Then, add alert trigger and give it a name.
 10. Click on "Create correlation rule".
 
-To find out if it works, attempt to connect to the IP via http and even be explict about the port `http://192.168.0.16:80`. Then open (Putty)[https://www.putty.org/] or terminal if you are on Linux or Mac, and attempt to connect to 192.168.0.16 via SSH.
+To find out if it works, attempt to connect to the IP via http and even be explict about the port `http://192.168.0.1:80`. Then open (Putty)[https://www.putty.org/] or terminal if you are on Linux or Mac, and attempt to connect to 192.168.0.16 via SSH.
 
 ```bash
-ssh 192.168.0.16
+ssh 192.168.0.1
 ```
 
 It doesn't matter if the IP has these services available. The NetFlow record will be created and the alert will be triggered.
 
 Give it a minute and then you should see in the Overview under Security Analytics a new alert.
+
+## Anomaly detection
+
+While looking at time series to detect anomalies is useful, automating the process is even better.
+
+1. Go to OpenSearch Dashboards > Anomaly Detection.
+2. Click Create detector.
+3. Give it a name ("AnomalyBytes") and description: "Anomaly detection for total bytes".
+4. Set the index pattern to "logstash-*" or just the alias "logstash".
+5. Add filter: `event_type.keyword:flow`.
+6. Set the time field to `@timestamp`.
+7. Click "Next".
+8. Set feature name as: Bytes.
+9. Set the field to `flow.total_bytes`.
+10. Click "Next" and create the detector.
+
+From there the detector will initialize. You have also the option to hit the "Historical Analysis" tab to have it run against the historical data to find anomalies. Notice that you have not setup any alerts for the anomaly detector. This means that you can see for anomalies in the dashboard but won't be notified by them. To be notified you have to setup alerts.
+
+## Setting up alerts
+
+1. Go to OpenSearch Dashboards > Notifications.
+2. Click on "Channels" and then "Create Channel".
+3. Name the channel. Then, choose the type of channel you want to create, e.g., "Email".
+
+TO BE CONTINUED...
