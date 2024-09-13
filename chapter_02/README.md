@@ -1,3 +1,5 @@
+# Chapter 2: Preparing to Secure your Network
+
 This guide consists of two sections:
 1. [Evaluating security settings of network devices](#networkdevices)
 2. [Setting up network security monitoring in your network](#nsm)

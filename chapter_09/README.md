@@ -1,4 +1,4 @@
-# Chapter 9: Recognizing threats from within
+# Chapter 9: Recognizing Threats from Within
 
 ## Byte transfers between internal IP pairs
 
