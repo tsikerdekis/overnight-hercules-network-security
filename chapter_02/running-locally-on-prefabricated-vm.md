@@ -1,7 +1,7 @@
 # Option 2: Running locally on prefabricated VM (Easy)
 This is the easiest way to get started but with on major caveat. You won't be monitoring your network but you will still practice with already collected data that I'm including in the virtual image.
 
-You can download a VM that has everything preinstalled and ready to go. You can download the VM from [here](https://drive.google.com/file/d/1Q6J9Q6Q6J9Q6Q6J9Q6Q6J9Q6Q6J9Q6J9Q6J9Q6J9Q6Q6J9Q6).
+You can download a VM that has everything preinstalled and ready to go. You can download the VM from [here](https://drive.google.com/file/d/1OFtSnGJUOTJC04cmsRnJZy046_Mlz-7-/view?usp=sharing).
 
 A video exists to help with the setup that can be seen [here](https://youtu.be/l6q9-l5nBH8). Or if you are confident enough, you can follow the steps below.
 
