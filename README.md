@@ -1,6 +1,6 @@
 # Overnight Hercules: Network Security
 
-[<img src="img/kindle-cover.png" width="300">](https://linktobook)
+[<img src="img/kindle-cover.png" width="300">](https://www.amazon.com/dp/B0DH5CZG56)
 
 **Unlock Your Cybersecurity Potential Overnight**
 
@@ -46,7 +46,7 @@ Secure your copy today and start your path to becoming a network security analys
 - Chapter 12 - Building Towards a Proactive Secure Future ([guide and code](./chapter_12/))
 - Chapter 13 - Next Steps
 
-Interested? You can [check out this book on Amazon](https://linktobook) directly, and start reading now.
+Interested? You can [check out this book on Amazon](https://www.amazon.com/dp/B0DH5CZG56) directly, and start reading now.
 
 ## Author
 [Michail Tsikerdekis](https://michael.tsikerdekis.com) ([@tsikerdekis](https://github.com/tsikerdekis))
