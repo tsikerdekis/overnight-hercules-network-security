@@ -1,6 +1,6 @@
 # Overnight Hercules: Network Security
 
-[<img src="img/kindle-cover.png">](https://linktobook)
+[<img src="img/kindle-cover.png" width="300">](https://linktobook)
 
 **Unlock Your Cybersecurity Potential Overnight**
 
