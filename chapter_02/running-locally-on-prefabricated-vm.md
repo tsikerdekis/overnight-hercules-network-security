@@ -18,3 +18,6 @@ A video exists to help with the setup that can be seen [here](https://youtu.be/l
 9. Once logged in, open a browser and type `localhost:5601`. You will see the Opensearch Dashboards interface. Example image:
 [![Dashboards](img/dashboards.png)](img/dashboards.png).
 10. The login information for the web interface is `admin` and the password is `Netsec123`.
+
+
+You can follow the subsequent chapters of the book to setup Visualizations or you can import some pre-made ones from the book's repository [here](prebuilt-dashboards.md). I DO NOT advise this if your objective is to learn how to make these and eventually become a security analyst.

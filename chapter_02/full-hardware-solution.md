@@ -108,3 +108,5 @@ Here is an example of the topology you should have after following the above ste
 
 ## Final step
 You'll need to setup an index pattern in OpenSearch Dashboards to see the data. The guide is [here](setting-up-index-pattern.md).
+
+You can follow the subsequent chapters of the book to setup Visualizations or you can import some pre-made ones from the book's repository [here](prebuilt-dashboards.md). I DO NOT advise this if your objective is to learn how to make these and eventually become a security analyst.
