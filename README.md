@@ -1,4 +1,4 @@
-# Overnight Hercules: Network Security
+# Overnight Hercules for Network Security: Become a Security Analyst
 
 [<img src="img/kindle-cover.png" width="300">](https://www.amazon.com/dp/B0DH5CZG56)
 
