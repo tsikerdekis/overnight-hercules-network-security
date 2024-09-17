@@ -4,7 +4,7 @@ Some of the dashboards that are shown throughout the book were exported so that 
 
 You can download the dashboards from the following links:
 
-1. [Alerts Dashboard](saved-objects/alerts-2.16.ndjson)
+1. [Alerts Dashboard](saved-objects/alert-2.16.ndjson)
 2. [Device Fingerprinting](saved-objects/device-fingerprinting-2.16.ndjson)
 3. [DNS Dashboard](saved-objects/dns-2.16.ndjson)
 4. [NetFlow Dashboard](saved-objects/netflow-2.16.ndjson)
