@@ -33,8 +33,8 @@ Next up, we need to install on Beelink the necessary software.
 6. Now you should see a terminal and be able to type commands.
 7. Install docker using the following guide (the three steps, you can copy-paste them): [Docker Install Guide](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository).
 8. Once docker is installed, you will take the book's shortcut that comes with all prepackaged IDS software needed. This saves you time. You need to install git to download the repository containing the necessary setup. Type `sudo apt install git` to install git.
-9. Then, clone the repository using `git clone https://github.com/tsikerdekis/overnight-hercules-network-security-opensearch-image.git`.
-10. Change directory to the repository using `cd applied-network-security-analysis`.
+9. Then, clone the repository using `git clone https://github.com/tsikerdekis/overnight-hercules-network-security-opensearch-image.git ohns-opensearch`.
+10. Change directory to the repository using `cd ohns-opensearch`.
 11. Before starting, you'll need to know the Ethernet interface of Beelink you wish to monitor. This is usually eth0 but just in case type `ifconfig` and look for the interface that has an IP address, within your subnet. For example:
 ```
 enp2s0: flags=4419<UP,BROADCAST,RUNNING,PROMISC,MULTICAST>  mtu 1500
