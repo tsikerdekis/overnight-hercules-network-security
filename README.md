@@ -1,7 +1,9 @@
 # Overnight Hercules for Network Security: Become a Security Analyst
-## Book companion repository
+
+**Book companion repository**
 
 [https://www.amazon.com/dp/B0DH5CZG56](https://www.amazon.com/dp/B0DH5CZG56)
+
 [<img src="img/kindle-cover.png" width="300">](https://www.amazon.com/dp/B0DH5CZG56)
 
 **Unlock Your Cybersecurity Potential Overnight**
