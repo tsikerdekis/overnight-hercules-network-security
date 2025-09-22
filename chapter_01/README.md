@@ -37,7 +37,7 @@ I cover two firewalls in this guide:
 - Malwarebytes Windows Firewall Control (Free) (https://forums.malwarebytes.com/topic/296798-malwarebytes-windows-firewall-control-wfc/)
 
 ## Windows Firewall
-The Windows Firewall is a built-in security feature that helps protect your computer from unauthorized access over the network. Although often not appreciated as much, it is a decent peace of software to use.
+The Windows Firewall is a built-in security feature that helps protect your computer from unauthorized access over the network. Although often not appreciated as much, it is a decent piece of software to use.
 
 Here's how you can check and configure your Windows Firewall settings:
 
