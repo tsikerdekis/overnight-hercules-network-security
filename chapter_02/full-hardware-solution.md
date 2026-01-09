@@ -53,7 +53,8 @@ Make a note of the code (e.g., enp2s0) that is associated with network interface
 [![Ready](img/nsm-ready.png)](img/nsm-ready.png)
 13. You can also verify that everything works by opening a browser and typing the IP address of Beelink. You should see the Opensearch Dashboards interface. Example image:
 [![Kibana](img/dashboards.png)](img/dashboards.png)
-14. At this point you can also go to your router and assign a fixed IP for beelink. This way, you can always access it using the same IP.
+
+14. At this point you can also go to your router and assign a fixed IP for beelink. This way, you can always access it using the same IP. During your first login, select Global Tenant when Opensearch asks. As for data, type, explore my own.
 
 ## Network Tap
 You can either use a passive or active tap. Passive taps are easier to use but active taps are more versatile. One active tap that you can use is a switch like [TP-Link TL-SG105E](https://www.amazon.com/TP-LINK-TL-SG105E-5-Port-Gigabit-Version/dp/B00N0OHEMA). This switch has a feature called port mirroring that allows you to mirror all traffic from one port to another.
