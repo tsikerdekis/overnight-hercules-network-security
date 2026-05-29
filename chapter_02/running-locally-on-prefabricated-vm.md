@@ -15,7 +15,7 @@ A video exists to help with the setup that can be seen [here](https://youtu.be/l
 6. Click Import. Make sure to select "all network adapters" to be included (not just NAT). All other settings you can leave as default.
 7. Once the import is over, click Start.
 8. The VM will boot and you will see a login screen. The username is `netsec` and the password is `netsec123`.
-9. Once logged in, open a browser and type `localhost:5601`. You will see the Opensearch Dashboards interface. Example image:
+9. Once logged in, open a browser on your host machine (not the VM) and type `localhost:5601`. You'll need to replace `localhost` with the IP address your VM assumed in your local network. That is shown when you first login and typically it starts with `192.168`. It may take a while for the VM to also load so you may want to wait a few minutes if the first time doesn't work. Check out this video [here](https://youtu.be/l6q9-l5nBH8) to see an example of the process. If all goes well, you will see the Opensearch Dashboards interface. Example image:
 [![Dashboards](img/dashboards.png)](img/dashboards.png).
 10. The login information for the web interface is `admin` and the password is `Netsec123`.
 
